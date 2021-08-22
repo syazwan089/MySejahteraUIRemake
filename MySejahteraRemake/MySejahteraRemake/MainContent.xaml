@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:bnb="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:view="clr-namespace:MySejahteraRemake.Pages"
+             x:Class="MySejahteraRemake.MainContent"
+             BackgroundColor="{StaticResource PageBackgroundColor}"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate 
+		        x:Key="TabItemTemplate">
+
+
+                <Grid>
+                    <Image
+				            
+				            VerticalOptions="Center"
+				            HorizontalOptions="Center"
+				            WidthRequest="30"
+				            HeightRequest="25"
+                            Margin="5,-15,5,0"
+                            bnb:IconTintColorEffect.TintColor="{TemplateBinding CurrentTextColor}"
+				            Source="{TemplateBinding CurrentIcon}" />
+                </Grid>
+
+
+
+
+
+
+            </ControlTemplate>
+
+
+            <Style
+		        x:Key="CustomTabStyle"
+		        TargetType="bnb:TabView">
+                <Setter
+			        Property="IsTabTransitionEnabled"
+			        Value="True" />
+                <Setter
+			        Property="TabStripHeight"
+			        Value="65" />
+                <Setter
+			        Property="TabContentBackgroundColor"
+			        Value="{StaticResource PageBackgroundColor}" />
+                <Setter
+			        Property="TabStripPlacement"
+			        Value="Bottom" />
+
+
+            </Style>
+
+
+        </ResourceDictionary>
+
+
+
+
+    </ContentPage.Resources>
+    <Grid>
+        <pancake:PancakeView HeightRequest="50" VerticalOptions="EndAndExpand"
+                             CornerRadius="30" Margin="15" BackgroundColor="White">
+            <pancake:PancakeView.Shadow>
+                <pancake:DropShadow Offset="10,10" BlurRadius="5"/>
+            </pancake:PancakeView.Shadow>
+
+        
+
+        </pancake:PancakeView>
+
+        <bnb:TabView  IsSwipeEnabled="False"
+                               Style="{StaticResource CustomTabStyle}">
+
+
+            <!-- Bottom nav bar 1  -->
+            <bnb:TabViewItem  
+                   TextColorSelected="{StaticResource PrimaryMain}" 
+                 
+                   ControlTemplate="{StaticResource TabItemTemplate}"
+                   TextColor="LightGray" >
+                <bnb:TabViewItem.Icon>
+                    <FileImageSource File="home.png"/>
+                </bnb:TabViewItem.Icon>
+                <bnb:TabViewItem.IconSelected>
+                    <FileImageSource File="home.png"/>
+                </bnb:TabViewItem.IconSelected>
+
+
+                <view:HomePage></view:HomePage>
+
+
+            </bnb:TabViewItem>
+
+            <!-- Bottom nav bar 2  -->
+            <bnb:TabViewItem    HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                   TextColorSelected="{StaticResource PrimaryMain}"
+                  
+                   ControlTemplate="{StaticResource TabItemTemplate}"
+                    TextColor="LightGray">
+                <bnb:TabViewItem.Icon>
+                    <FileImageSource File="qrcode.png"/>
+                </bnb:TabViewItem.Icon>
+                <bnb:TabViewItem.IconSelected>
+                    <FileImageSource File="qrcode.png"/>
+                </bnb:TabViewItem.IconSelected>
+
+                <view:CheckInPage ></view:CheckInPage>
+
+            </bnb:TabViewItem>
+
+
+
+
+
+            <!-- Bottom nav bar 3  -->
+            <bnb:TabViewItem 
+                  
+                    ControlTemplate="{StaticResource TabItemTemplate}"
+                    TextColor="LightGray"
+                    TextColorSelected="{StaticResource PrimaryMain}">
+                <bnb:TabViewItem.Icon>
+                    <FileImageSource File="profile.png"/>
+                </bnb:TabViewItem.Icon>
+
+                <bnb:TabViewItem.IconSelected>
+                    <FileImageSource File="profile.png"/>
+                </bnb:TabViewItem.IconSelected>
+                <view:CheckInPage ></view:CheckInPage>
+
+            </bnb:TabViewItem>
+
+
+
+
+
+        </bnb:TabView>
+
+    </Grid>
+
+</ContentPage>

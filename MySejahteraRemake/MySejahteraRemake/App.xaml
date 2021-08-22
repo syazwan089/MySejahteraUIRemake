@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySejahteraRemake.App"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="PageBackgroundColor">#ECF1FB</Color>
+            <Color x:Key="PrimaryTextColor">#3D3D3D</Color>
+            <Color x:Key="SecondaryTextColor">#717171</Color>
+            <Color x:Key="PrimaryMain">#4A79F8</Color>
+            <Color x:Key="SuccesColor">#38C165</Color>
+            <Color x:Key="WarningColor">#F6CD00</Color>
+            <Color x:Key="DangerColor">#E21F1F</Color>
+
+
+            <Style TargetType="Label" x:Key="Title">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="Roboto-Bold" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+
+            <Style TargetType="Label" x:Key="DetailTitle">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="Roboto-Regular" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+
+            <Style TargetType="Label" x:Key="SubTitle">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}" />
+                <Setter Property="FontFamily" Value="Roboto-Regular" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="Roboto-Regular" />
+                <Setter Property="BackgroundColor" Value="#2b0b98" />
+                <Setter Property="Padding" Value="14,10" />
+            </Style>
+
+           
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

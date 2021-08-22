@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="MySejahteraRemake.Pages.CheckInPage"
+             
+             >
+    <ContentView.Content>
+        <Grid>
+            <StackLayout>
+
+
+                <StackLayout VerticalOptions="StartAndExpand"  Margin="20">
+                    <StackLayout>
+                        <Label Style="{StaticResource Title}" Text="MySejahtera Check-in" />
+                    </StackLayout>
+                    <StackLayout VerticalOptions="Start">
+
+                        <StackLayout>
+
+                            <pancakeView:PancakeView Margin="0,30,0,0" CornerRadius="25"    
+                           VerticalOptions="FillAndExpand"
+                           BackgroundColor="White"
+                           HeightRequest="135" Padding="0"
+                           HorizontalOptions="FillAndExpand">
+                                <pancakeView:PancakeView.Shadow>
+                                    <pancakeView:DropShadow Offset="10,10" BlurRadius="5"/>
+                                </pancakeView:PancakeView.Shadow>
+                                <StackLayout HorizontalOptions="CenterAndExpand" 
+                                         VerticalOptions="CenterAndExpand">
+                                    <Label Style="{StaticResource Title}"
+                                            HorizontalTextAlignment="Center" 
+                                            VerticalTextAlignment="Center"         
+                                            Text="Mohamad Nur Syazwan" />
+                                    <Label Style="{StaticResource SubTitle}"
+                                            HorizontalTextAlignment="Center" 
+                                            VerticalTextAlignment="Center"         
+                                            Text="syazwan@clearvisionstudiomy.com" />
+                                </StackLayout>
+
+
+                            </pancakeView:PancakeView>
+
+
+
+
+                        </StackLayout>
+
+
+
+                    </StackLayout>
+
+                    <Frame HorizontalOptions="CenterAndExpand" 
+                             HeightRequest="300" BackgroundColor="Transparent"
+                             VerticalOptions="StartAndExpand">
+                        <Image Source="checkin.png"   Aspect="AspectFit"
+                           Margin="15"/>
+                    </Frame>
+                    <Label Style="{StaticResource Title}" TextColor="{StaticResource SuccesColor}"
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center"         
+                                        Text="Low Risk No Symtom"/>
+                    <Label Style="{StaticResource  SubTitle}"
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center"         
+                                        Text="You have completed 2nd dos vaccination"/>
+
+
+                    <pancakeView:PancakeView Margin="5,20,5,10" CornerRadius="5"    
+                           VerticalOptions="FillAndExpand"
+                           BackgroundColor="{StaticResource PrimaryMain}"
+                           HeightRequest="35" Padding="0"
+                           HorizontalOptions="FillAndExpand">
+                        <pancakeView:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                        </pancakeView:PancakeView.GestureRecognizers>
+                        <pancakeView:PancakeView.Shadow>
+                            <pancakeView:DropShadow Offset="10,10" BlurRadius="5"/>
+                        </pancakeView:PancakeView.Shadow>
+                        <Grid HorizontalOptions="FillAndExpand" 
+                                         VerticalOptions="CenterAndExpand">
+                            <Image Source="camera.png" Margin="10,5,5,5"  HorizontalOptions="Start"/>
+                            <Label Style="{StaticResource Title}" TextColor="White"  HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center"         
+                                        Text="CHECK-IN"/>
+                        </Grid>
+
+
+                    </pancakeView:PancakeView>
+
+
+                </StackLayout>
+                
+                
+            </StackLayout>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

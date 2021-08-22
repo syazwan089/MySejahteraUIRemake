@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="MySejahteraRemake.Pages.CheckInResultPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="scan.png" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <Grid>
+            <ScrollView>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+
+                        <pancakeView:PancakeView Margin="0,20,0,0" CornerRadius="25"    
+                           VerticalOptions="FillAndExpand"
+                           BackgroundColor="White"
+                           HeightRequest="85" Padding="0"
+                           HorizontalOptions="FillAndExpand">
+                            <pancakeView:PancakeView.Shadow>
+                                <pancakeView:DropShadow Offset="10,10" BlurRadius="5"/>
+                            </pancakeView:PancakeView.Shadow>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="logo.png" Margin="10,8,5,5" VerticalOptions="CenterAndExpand"/>
+                                <StackLayout HorizontalOptions="EndAndExpand"  Margin="15"
+                                         VerticalOptions="CenterAndExpand">
+                                    <Label Style="{StaticResource Title}"
+                                            HorizontalTextAlignment="End" 
+                                            VerticalTextAlignment="End"         
+                                            Text="Terima Kasih" />
+                                    <Label Style="{StaticResource SubTitle}"
+                                            HorizontalTextAlignment="End" 
+                                            VerticalTextAlignment="End"         
+                                            Text="Pendaftaran anda Berjaya!" />
+                                </StackLayout>
+                            </StackLayout>
+
+
+
+                        </pancakeView:PancakeView>
+
+                        <StackLayout Margin="0,50,0,0">
+                            <Label Style="{StaticResource Title}" TextColor="{StaticResource SuccesColor}"
+                                            HorizontalTextAlignment="Start"      
+                                            Text="Vaksinasi penuh" />
+                            <Label Style="{StaticResource SubTitle}"
+                                            HorizontalTextAlignment="Start"         
+                                            Text="Lengkap dos kedua pada 21 Ogos 2021" />
+                        </StackLayout>
+
+                        <pancakeView:PancakeView Margin="0,20,0,0" CornerRadius="25"    
+                           VerticalOptions="FillAndExpand"
+                           BackgroundColor="{StaticResource SuccesColor}"
+                           HeightRequest="430" Padding="0"
+                           HorizontalOptions="FillAndExpand">
+                            <pancakeView:PancakeView.Shadow>
+                                <pancakeView:DropShadow Offset="10,10" BlurRadius="5"/>
+                            </pancakeView:PancakeView.Shadow>
+                            <Grid>
+                                <StackLayout>
+                                    <pancakeView:PancakeView CornerRadius="25"    
+                                        VerticalOptions="EndAndExpand" Margin="15"
+                                        BackgroundColor="White"
+                                        HeightRequest="348" Padding="0"
+                                        HorizontalOptions="FillAndExpand">
+                                        <pancakeView:PancakeView.Shadow>
+                                            <pancakeView:DropShadow Offset="10,10" BlurRadius="5"/>
+                                        </pancakeView:PancakeView.Shadow>
+                                        <StackLayout Padding="15">
+
+                                            <StackLayout  Margin="0,5">
+
+                                                <Label Style="{StaticResource SubTitle}"
+                                                    HorizontalTextAlignment="Start"         
+                                                    Text="Lokasi" />
+                                                <Label Style="{StaticResource DetailTitle}"
+                                                    HorizontalTextAlignment="Start"  Margin="0,-8,0,0"    
+                                                    Text="Starbucks Jade Hills DT" />
+                                            </StackLayout>
+                                            <StackLayout Margin="0,5">
+
+                                                <Label Style="{StaticResource SubTitle}"
+                                                    HorizontalTextAlignment="Start"         
+                                                    Text="Nama" />
+                                                <Label Style="{StaticResource DetailTitle}"
+                                                    HorizontalTextAlignment="Start"  Margin="0,-8,0,0"    
+                                                    Text="Mohamad Nur Syazwan bin Mohd Noor" />
+                                            </StackLayout>
+                                            <StackLayout Margin="0,5">
+
+                                                <Label Style="{StaticResource SubTitle}"
+                                                    HorizontalTextAlignment="Start"         
+                                                    Text="Email" />
+                                                <Label Style="{StaticResource DetailTitle}"
+                                                    HorizontalTextAlignment="Start"  Margin="0,-8,0,0"    
+                                                    Text="syazwan@clearvisionstudiomy.com" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+
+                                                <StackLayout Margin="0,5" HorizontalOptions="StartAndExpand">
+
+                                                    <Label Style="{StaticResource SubTitle}"
+                                                    HorizontalTextAlignment="Start"         
+                                                    Text="Tarikh" />
+                                                    <Label Style="{StaticResource DetailTitle}"
+                                                    HorizontalTextAlignment="Start"  Margin="0,-8,0,0"    
+                                                    Text="21 August 2021" />
+                                                </StackLayout>
+                                                <StackLayout Margin="0,5" HorizontalOptions="EndAndExpand">
+
+                                                    <Label Style="{StaticResource SubTitle}"
+                                                    HorizontalTextAlignment="End"         
+                                                    Text="Masa" />
+                                                    <Label Style="{StaticResource DetailTitle}"
+                                                    HorizontalTextAlignment="End"  Margin="0,-8,0,0"    
+                                                    Text="6:32 PM" />
+                                                </StackLayout>
+                                            </StackLayout>
+
+                                            <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,10">
+                                                <Label Style="{StaticResource SubTitle}"
+                                                    HorizontalTextAlignment="Center"         
+                                                    Text="Risiko" />
+
+                                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                                    <Frame BackgroundColor="{StaticResource SuccesColor}"
+                                                           Padding="0" CornerRadius="20" 
+                                                           WidthRequest="66">
+                                                        <Label Style="{StaticResource DetailTitle}"
+                                                            HorizontalTextAlignment="Center" Margin="6"    
+                                                            Text="Low" TextColor="White"/>
+                                                    </Frame>
+                                                </StackLayout>
+                                                
+                                                
+                                            </StackLayout>
+
+                                            <BoxView HorizontalOptions="FillAndExpand" 
+                                                     Color="{StaticResource SecondaryTextColor}" 
+                                                     HeightRequest="0.5"/>
+
+
+
+                                            <StackLayout Orientation="Horizontal">
+
+                                                <StackLayout Margin="0,5" HorizontalOptions="StartAndExpand">
+
+                                                    <Label Style="{StaticResource SubTitle}"
+                                                    HorizontalTextAlignment="Start"         
+                                                    Text="Sila tunjukkan tiket ini kepada 
+                                                          pemilik premis apabila diminta" />
+                                                  
+                                                </StackLayout>
+                                                <StackLayout Margin="0,5" Orientation="Horizontal"  HorizontalOptions="EndAndExpand">
+                                                    <Image Source="mkn.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand" HeightRequest="35"/>
+                                                    <Image Source="kkm.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand" HeightRequest="35"/>
+                                                   
+                                                   
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+
+
+
+                                    </pancakeView:PancakeView>
+
+                                </StackLayout>
+                                <Label Style="{StaticResource SubTitle}" TextColor="White" FontSize="14"
+                                            HorizontalTextAlignment="Start" Margin="15,20,0,0"       
+                                            Text="Maklumat check-in" />
+                            </Grid>
+
+
+
+
+                        </pancakeView:PancakeView>
+
+
+
+                    </StackLayout>
+                </StackLayout>
+         
+            </ScrollView>
+          
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
